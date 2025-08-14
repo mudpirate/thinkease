@@ -24,7 +24,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="bg-black text-gray-200 py-11">
+    <section className="py-32 ">
       <div className="px-6 lg:px-10 text-center">
         <h2 className="text-3xl font-bold text-white mb-4">What People Say</h2>
         <p className="text-gray-400 mb-12">
@@ -35,9 +35,9 @@ export default function Testimonials() {
           {testimonials.map((t, index) => (
             <div
               key={index}
-              className="bg-black border rounded-2xl p-6 shadow-lg hover:shadow-2xl transition"
+              className="bg-black border hover:scale-105 ease-in-out transition-all rounded-2xl p-6 shadow-lg hover:shadow-2xl transition"
             >
-              <div className="text-blue-400 text-2xl mb-4">
+              <div className="text-white text-2xl mb-4">
                 <FaQuoteLeft />
               </div>
               <p className="text-gray-300 text-sm leading-relaxed mb-6">
@@ -47,7 +47,7 @@ export default function Testimonials() {
                 <img
                   src={t.image}
                   alt={t.name}
-                  className="w-12 h-12 rounded-full border-2 border-blue-400"
+                  className="w-12 h-12 rounded-full border-2 border-white"
                 />
                 <div className="text-left">
                   <h4 className="font-semibold text-white">{t.name}</h4>

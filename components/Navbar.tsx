@@ -24,33 +24,34 @@ export default function Navbar() {
 
   return (
     <nav className="absolute top-0 left-0 w-full z-20">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-2  ">
         <div className="flex justify-between h-16 items-center">
           {/* Logo */}
           <Link
             href="/"
-            className="flex text-white items-center gap-2 font-bold text-lg"
+            className="flex text-white items-center  flex-1 gap-2 font-bold text-2xl"
           >
             <FaBrain />
             ThinkEase
           </Link>
 
           {/* Desktop Links */}
-          <div className="hidden md:flex space-x-6">
+          <div className="hidden md:flex md:justify-evenly  md:items-center md:flex-1 ">
             {navLinks.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="hover:text-gray-200 text-white transition-colors"
+                className="hover:text-gray-200 text-lg   text-white transition-colors"
               >
                 {link.name}
               </Link>
             ))}
           </div>
 
-          <div className="hidden text-black px-3 py-2 rounded-r-full rounded-l-full bg-white md:block">
-            {" "}
-            Sign In
+          <div className="hidden  md:flex justify-end items-center md:flex-1 ">
+            <button className="rounded-r-full rounded-l-full px-5  py-2 text-black bg-white">
+              Sign In
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -65,13 +66,13 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden h-[60vh] rounded-2xl backdrop-blur-lg">
+        <div className="md:hidden h-[80vh]  backdrop-blur-md">
           <div className="px-4 py-15 space-y-4">
             {navLinksMob.map((link) => (
               <Link
                 key={link.name}
                 href={link.href}
-                className="block hover:bg-teal-500 rounded-xl text-white border-b   px-3 py-2 transition"
+                className="block   text-white border-b   px-3 py-2 transition"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}

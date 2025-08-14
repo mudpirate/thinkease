@@ -39,7 +39,7 @@ export default function FeaturesSection() {
   // ... existing code ...
 
   return (
-    <section className="py-16   px-6 bg-black">
+    <section className="py-32   px-6 ">
       <div className="max-w-6xl mx-auto text-center">
         {/* Section Heading */}
         <h2 className="text-3xl font-bold text-white mb-4">
@@ -55,7 +55,7 @@ export default function FeaturesSection() {
           {features.map((feature, index) => (
             <div
               key={index}
-              className="flex flex-col justify-center border border-gray-300 items-center bg-black  p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="flex flex-col justify-center hover:scale-105 ease-in-out transition-all border border-gray-300 items-center bg-black  p-8 rounded-2xl shadow-lg hover:shadow-xl duration-300"
             >
               <div className="">{feature.icon}</div>
               <h3 className="text-xl font-semibold text-white mb-3">
